@@ -34,7 +34,7 @@ const handlDomCharacters = (() => {
         );
 
         const detailsImg = document.createElement("img");
-        detailsImg.setAttribute("src", `../assets/eye.svg`);
+        detailsImg.setAttribute("src", `assets/eye.svg`);
 
         const name = document.createElement("p");
         name.className = "name";
