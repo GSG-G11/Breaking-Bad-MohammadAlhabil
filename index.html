@@ -13,7 +13,145 @@
       href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&family=Readex+Pro:wght@200;300;400;500;600;700&family=Yeseva+One&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="characters/characters.css" />
     <title>Breaking Bad</title>
   </head>
-  <body></body>
+  <body>
+    <header class="header">
+      <p class="logo">Breaking Bad</p>
+      <div class="search-wrap">
+        <input
+          type="search"
+          placeholder="Search by full name of your characters.."
+          id="search-input"
+        />
+        <img class="search-icon" src="assets/search.svg" alt="search" />
+        <select name="search-select" id="search-select">
+          <option value="characters" selected>Characters</option>
+          <option value="episodes">Episodes</option>
+          <option value="quote">Quote</option>
+          <option value="deaths">Deaths</option>
+        </select>
+      </div>
+      <div id="theme-switcher">
+        <label class="switch">
+          <input id="them-input" type="checkbox" />
+          <span class="slider"></span>
+        </label>
+      </div>
+      <img class="menu" src="assets/menu.svg" alt="menu" />
+    </header>
+
+    <main>
+      <nav class="nav">
+        <img class="close-nav" src="assets/close.svg" alt="close" />
+        <div class="list-wrap">
+          <p class="title">DISCOVER</p>
+          <ul>
+            <li><span class="active-item">Characters</span></li>
+            <li><span>Seasons</span></li>
+            <li><span>Episodes</span></li>
+            <li><span>Quote</span></li>
+            <li><span>Deaths</span></li>
+          </ul>
+        </div>
+
+        <div class="list-wrap">
+          <p class="title">TRENDING</p>
+          <ul>
+            <li><span>Images of Series</span></li>
+          </ul>
+        </div>
+
+        <div class="list-wrap">
+          <p class="title">OTHER</p>
+          <ul>
+            <li><span>Feedback</span></li>
+          </ul>
+        </div>
+      </nav>
+
+      <section class="big-content-wrap">
+        <h1 class="main-title">Characters</h1>
+        <div class="sort-wrap">
+          <div class="sort-item sort-title-wrap">
+            <span class="sort-title">SORT</span>
+          </div>
+          <div class="sort-item">
+            <input
+              type="radio"
+              id="none"
+              name="sort-item"
+              value="none"
+              checked
+            />
+            <label for="none">None</label>
+          </div>
+          <div class="sort-item">
+            <input type="radio" id="young" name="sort-item" value="young" />
+            <label for="young">Young</label>
+          </div>
+          <div class="sort-item">
+            <input type="radio" id="old" name="sort-item" value="old" />
+            <label for="old">Old</label>
+          </div>
+          <div class="sort-item">
+            <input type="radio" id="A_Z" name="sort-item" value="A_Z" />
+            <label for="A_Z">A - Z</label>
+          </div>
+          <div class="sort-item">
+            <input type="radio" id="Z_A" name="sort-item" value="Z_A" />
+            <label for="Z_A">Z - A</label>
+          </div>
+        </div>
+        <div class="content-wrap">
+          <ul class="charaters-list"></ul>
+        </div>
+      </section>
+      <section id="detailsSection" class="details-wrap-bg">
+        <div class="details-wrap">
+          <img id="chImg" class="ch-img" src="" alt="character img" />
+          <img
+            id="closeDetails"
+            class="close-details"
+            src="assets/close.svg"
+            alt="close"
+          />
+          <div class="details">
+            <p id="chName" class="ch-name"></p>
+            <p id="chNickName" class="ch-nickname"></p>
+            <div class="sub-details">
+              <div class="item-wrap">
+                <img src="assets/date.svg" alt="date" />
+                <span id="chDate"></span>
+              </div>
+              <div class="item-wrap">
+                <img src="assets/eye.svg" alt="eye" />
+                <span id="chAppearance"></span>
+              </div>
+              <div class="item-wrap">
+                <img src="assets/alive.svg" alt="alive" />
+                <span id="chStatus"></span>
+              </div>
+              <div class="item-wrap">
+                <img src="assets/camera.svg" alt="camera" />
+                <span id="chPortrayed"></span>
+              </div>
+            </div>
+            <div class="link-wrap">
+              <span>Click on Icon to Copy the Link</span>
+              <img id="copyLink" src="assets/link.svg" alt="link" />
+              <span id="shortLink"></span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <div id="scrollToTopBtn" class="btn-scroll hide">
+      <img src="assets/arrowdown.svg" alt="" />
+    </div>
+    <script src="fetch.js"></script>
+    <script src="characters/handleDomCharacters.js"></script>
+    <script src="characters/characters.js"></script>
+  </body>
 </html>
