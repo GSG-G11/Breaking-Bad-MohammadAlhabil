@@ -105,114 +105,53 @@
           </div>
         </div>
         <div class="content-wrap">
-          <ul class="charaters-list">
-            <li>
-              <div class="img-wrap">
-                <img
-                  class="charaters-img"
-                  src="assets/notfounddark.svg"
-                  alt="charaters image"
-                />
-                <div class="clr-linear"></div>
-                <div class="details-icon">
-                  <img src="assets/eye.svg" alt="details icon" />
-                </div>
-                <p class="name">Henry Schrader</p>
+          <ul class="charaters-list"></ul>
+        </div>
+      </section>
+      <section id="detailsSection" class="details-wrap-bg">
+        <div class="details-wrap">
+          <img id="chImg" class="ch-img" src="" alt="character img" />
+          <img
+            id="closeDetails"
+            class="close-details"
+            src="assets/close.svg"
+            alt="close"
+          />
+          <div class="details">
+            <p id="chName" class="ch-name"></p>
+            <p id="chNickName" class="ch-nickname"></p>
+            <div class="sub-details">
+              <div class="item-wrap">
+                <img src="assets/date.svg" alt="date" />
+                <span id="chDate"></span>
               </div>
-            </li>
-
-            <li>
-              <div class="img-wrap">
-                <img
-                  class="charaters-img"
-                  src="assets/notfounddark.svg"
-                  alt="charaters image"
-                />
-                <div class="clr-linear"></div>
-                <div class="details-icon">
-                  <img src="assets/eye.svg" alt="details icon" />
-                </div>
-                <p class="name">Henry Schrader</p>
+              <div class="item-wrap">
+                <img src="assets/eye.svg" alt="eye" />
+                <span id="chAppearance"></span>
               </div>
-            </li>
-
-            <li>
-              <div class="img-wrap">
-                <img
-                  class="charaters-img"
-                  src="assets/notfounddark.svg"
-                  alt="charaters image"
-                />
-                <div class="clr-linear"></div>
-                <div class="details-icon">
-                  <img src="assets/eye.svg" alt="details icon" />
-                </div>
-                <p class="name">Henry Schrader</p>
+              <div class="item-wrap">
+                <img src="assets/alive.svg" alt="alive" />
+                <span id="chStatus"></span>
               </div>
-            </li>
-
-            <li>
-              <div class="img-wrap">
-                <img
-                  class="charaters-img"
-                  src="assets/notfounddark.svg"
-                  alt="charaters image"
-                />
-                <div class="clr-linear"></div>
-                <div class="details-icon">
-                  <img src="assets/eye.svg" alt="details icon" />
-                </div>
-                <p class="name">Henry Schrader</p>
+              <div class="item-wrap">
+                <img src="assets/camera.svg" alt="camera" />
+                <span id="chPortrayed"></span>
               </div>
-            </li>
-
-            <li>
-              <div class="img-wrap">
-                <img
-                  class="charaters-img"
-                  src="assets/notfounddark.svg"
-                  alt="charaters image"
-                />
-                <div class="clr-linear"></div>
-                <div class="details-icon">
-                  <img src="assets/eye.svg" alt="details icon" />
-                </div>
-                <p class="name">Henry Schrader</p>
-              </div>
-            </li>
-
-            <li>
-              <div class="img-wrap">
-                <img
-                  class="charaters-img"
-                  src="assets/notfounddark.svg"
-                  alt="charaters image"
-                />
-                <div class="clr-linear"></div>
-                <div class="details-icon">
-                  <img src="assets/eye.svg" alt="details icon" />
-                </div>
-                <p class="name">Henry Schrader</p>
-              </div>
-            </li>
-
-            <li>
-              <div class="img-wrap">
-                <img
-                  class="charaters-img"
-                  src="assets/notfounddark.svg"
-                  alt="charaters image"
-                />
-                <div class="clr-linear"></div>
-                <div class="details-icon">
-                  <img src="assets/eye.svg" alt="details icon" />
-                </div>
-                <p class="name">Henry Schrader</p>
-              </div>
-            </li>
-          </ul>
+            </div>
+            <div class="link-wrap">
+              <span>Click on Icon to Copy the Link</span>
+              <img id="copyLink" src="assets/link.svg" alt="link" />
+              <span id="shortLink"></span>
+            </div>
+          </div>
         </div>
       </section>
     </main>
+    <div id="scrollToTopBtn" class="btn-scroll hide">
+      <img src="assets/arrowdown.svg" alt="" />
+    </div>
+    <script src="fetch.js"></script>
+    <script src="characters/handleDomCharacters.js"></script>
+    <script src="characters/characters.js"></script>
   </body>
 </html>
