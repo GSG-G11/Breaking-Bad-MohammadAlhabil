@@ -14,8 +14,10 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="characters/characters.css" />
+    <link rel="stylesheet" href="trending/trending.css" />
     <title>Breaking Bad</title>
   </head>
+
   <body>
     <header class="header">
       <p class="logo">Breaking Bad</p>
@@ -48,7 +50,7 @@
         <div class="list-wrap">
           <p class="title">DISCOVER</p>
           <ul>
-            <li><span class="active-item">Characters</span></li>
+            <li id="characters"><span class="active-item">Characters</span></li>
             <li><span>Seasons</span></li>
             <li><span>Episodes</span></li>
             <li><span>Quote</span></li>
@@ -59,7 +61,7 @@
         <div class="list-wrap">
           <p class="title">TRENDING</p>
           <ul>
-            <li><span>Images of Series</span></li>
+            <li id="imagesOfSeries"><span>Images of Series</span></li>
           </ul>
         </div>
 
@@ -108,6 +110,11 @@
           <ul class="charaters-list"></ul>
         </div>
       </section>
+      <section class="images-content-wrap">
+        <div class="content-wrap">
+          <ul id="imagesList" class="charaters-list"></ul>
+        </div>
+      </section>
       <section id="detailsSection" class="details-wrap-bg">
         <div class="details-wrap">
           <img id="chImg" class="ch-img" src="" alt="character img" />
@@ -141,7 +148,6 @@
             <div class="link-wrap">
               <span>Click on Icon to Copy the Link</span>
               <img id="copyLink" src="assets/link.svg" alt="link" />
-              <span id="shortLink"></span>
             </div>
           </div>
         </div>
@@ -153,5 +159,7 @@
     <script src="fetch.js"></script>
     <script src="characters/handleDomCharacters.js"></script>
     <script src="characters/characters.js"></script>
+    <script src="trending/handleDomTrending.js"></script>
+    <script src="trending/trending.js"></script>
   </body>
 </html>

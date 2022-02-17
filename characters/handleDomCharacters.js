@@ -10,10 +10,13 @@ const chStatus = document.querySelector("#chStatus");
 const chPortrayed = document.querySelector("#chPortrayed");
 const copyLink = document.querySelector("#copyLink");
 const shortLink = document.querySelector("#shortLink");
+let listOfCharacter;
 
 const handlDomCharacters = (() => {
   return {
     characterData: (data) => {
+      listOfCharacter = data;
+      charatersList.textContent = "";
       data.forEach((character, index) => {
         const list = document.createElement("li");
         const imgWrap = document.createElement("div");
@@ -63,6 +66,7 @@ const handlDomCharacters = (() => {
       chName.setAttribute("data-index", `${data.char_id}`);
     },
     getshortLink: (data) => {
+      console.log(data);
       shortLink.textContent = data.result.short_link;
     },
   };
@@ -75,6 +79,13 @@ const addEvent = (selector, event, cb) => {
 addEvent(closeDetails, "click", () => (detailsSection.style.display = "none"));
 addEvent(copyLink, "click", () => {
   const chId = chName.getAttribute("data-index");
+  navigator.clipboard.writeText(
+    `https://www.breakingbadapi.com/api/characters/${chId}`
+  );
+  copyLink.src = `assets/done.svg`;
+  setTimeout(() => {
+    copyLink.src = `assets/link.svg`;
+  }, 2000);
   const url = `https://www.breakingbadapi.com/api/characters/${chId}`;
   const urlshort = `https://api.shrtco.de/v2/shorten?url=${url}`;
   fetchData("POST", urlshort, handlDomCharacters.getshortLink);

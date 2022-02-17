@@ -1,0 +1,11 @@
+.images-content-wrap {
+  padding: 0 50px;
+  width: 80vw;
+  height: calc(100vh - 100px);
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+#imagesOfSeries {
+  cursor: pointer;
+}
