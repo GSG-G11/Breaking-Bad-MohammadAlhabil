@@ -55,14 +55,18 @@ const displayNav = () =>
   (nav.style.display = nav.style.display === "none" ? "block" : "none");
 addEvent(menu, "click", displayNav);
 
-const closeNavBar = () => (av.style.display = "none");
+const closeNavBar = () => (nav.style.display = "none");
 addEvent(closeNav, "click", closeNavBar);
+
+const windowSize = ()=>{  
+  if(window.innerWidth > 500) nav.style.display = "block"
+else if(window.innerWidth < 500) nav.style.display = "none"}
+window.onresize = windowSize;
 
 //Search For Character
 const searchInput = document.querySelector("#search-input");
 addEvent(searchInput, "keypress", (e) => {
   if (e.key === "Enter") {
-    console.log(searchInput.value);
     const urlCharacter = `https://www.breakingbadapi.com/api/characters?name=${searchInput.value}`;
     fetchData("GET", urlCharacter, handl.characterData);
   }

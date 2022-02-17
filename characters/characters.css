@@ -590,6 +590,9 @@ main {
   .charaters-list {
     grid-template-columns: repeat(3, 1fr);
   }
+  .nav {
+    display: block;
+  }
 }
 
 @media (max-width: 768px) {
@@ -703,5 +706,8 @@ main {
   }
   .details-wrap {
     width: 100%;
+  }
+  .sort-title::after {
+display: none;
   }
 }
